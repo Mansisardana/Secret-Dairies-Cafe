@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #F5E6D3;
+    color: #4B2E1A;
+}  
+  
+/* NAVIGATION */
+.header {
+    background-color: #6F4E37;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and text */
+}
+
+.logo {
+    width: 80px;  
+    height: 70px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 2px solid #F5E6D3; 
+    transition: transform 0.5s ease-in-out; /* Smooth rolling effect */
+}
+
+.logo:hover {
+    transform: rotate(360deg); /* Rotates the logo on hover */
+}
+
+.logo-text {
+    position: absolute;
+    left: 100%; /* Moves text to the right of image */
+    white-space: nowrap; /* Prevents text from wrapping */
+    background: #6F4E37;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    font-family: "Merienda", cursive;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateX(-10px); /* Slight offset for smooth effect */
+}
+
+.logo-container:hover .logo-text {
+    opacity: 1; /* Shows text on hover */
+    transform: translateX(10px); /* Moves text slightly to the right */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin-left: 50px;  
+    gap: 3rem;
+}
+
+.nav-links a {
+    color: #F5E6D3;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: "Raleway", cursive;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a:hover {
+    transform: scale(1.2);
+    color:  burlywood;
+}
+
+.nav-links a.active {
+    background-color: #d2691e; /* Highlight color */
+    color: white; 
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a.active:hover {
+    background-color: #8b4513; /* Darker color on hover */
+}
+
+
+/* ScrollBar */
+
+::-webkit-scrollbar{
+    width: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: (rgb(118, 42, 42));
+}
+
+::-webkit-scrollbar-thumb{
+   min-height: 27vh;
+   background:  linear-gradient(rgb(237, 134, 74), rgb(108, 75, 42));
+   border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+      background: linear-gradient(rgb(128, 58, 17), rgb(239, 181, 123));
+      cursor: pointer;
+}
+
+/* COFFEE BACKGROUND */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(111, 78, 55, 0.5), rgba(111, 78, 55, 0.5)),
+    url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero-content {
+    color: #FFF;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #A17C5F;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #8A6B53;
+}
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    font-size: 25px;
+    padding: 50px 20px;
+    background: #b0774f;
+    color: white;
+}
+
+.welcome p{
+    font-family: "Winky Sans", cursive;
+}
+
+.welcome h2{
+    font-family: "popins", cursive;
+}
+
+.welcome img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* FEATURES */
+.features {
+    padding: 4rem 2rem;
+    background-color: #FFF5EB;
+}
+
+.features p {
+    font-family: "Winky Sans", cursive;
+}
+
+.features-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease, color 0.4s ease, transform 0.3s ease;
+}
+
+.feature-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+} 
+
+.feature-card:hover {
+    background: #f6cb9d;
+    color: #324360;
+    transform: translateY(-5px);
+}
+
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.testimonial-box {
+    background: #fff;
+    padding: 20px;
+    width: 60%;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-box p {
+    font-style: italic;
+}
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #6F4E37;
+    color: white;
+}
+
+.footer p{
+    font-family: "Winky Sans", italic;
+    font-size: 20px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #baba8d;
+}   
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.social-links{
+    margin-top: 19px;
+}
+
+/* Style for social media links */
+.social-links a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    color: white; /* Default icon color */
+    margin: 0 10px;
+    text-align: center;
+    border-radius: 50%; /* Circular icons */
+    background-color: #3e2723; /* Dark coffee color */
+    border: 2px solid #f7f3f1; /* Light border */
+    transition: all 0.4s ease-in-out;
+}
+
+/* Tooltip Styling */
+.social-links a::before {
+    content: attr(data-tooltip); /* Get text from data-tooltip attribute */
+    position: absolute;
+    bottom: 40px; /* Position tooltip above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(241, 202, 142, 0.8);
+    color: black;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Tooltip Arrow */
+.social-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(241, 202, 142, 0.8) transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show Tooltip on Hover */
+.social-links a:hover::before,
+.social-links a:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* Facebook */
+.social-links a:nth-child(1):hover {
+    background-color: #1877F2; /* Facebook Blue */
+    color: white;
+    border-color: #1877F2;
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Instagram */
+.social-links a:nth-child(2):hover {
+    background-color: #E1306C; /* Instagram Pink */
+    color: white;
+    border-color: #E1306C;
+    transform: rotate(-360deg) scale(1.1);
+}
+
+/* Twitter */
+.social-links a:nth-child(3):hover {
+    background-color: #1DA1F2; /* Twitter Blue */
+    color: white;
+    border-color: #1DA1F2;
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

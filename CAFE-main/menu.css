@@ -1,0 +1,186 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5eb;
+    text-align: center;
+    font-style: italic;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    position: relative;
+    right: 10%;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and text */
+}
+
+.logo {
+    width: 80px;  
+    height: 70px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 2px solid #F5E6D3; 
+    transition: transform 0.5s ease-in-out; /* Smooth rolling effect */
+}
+
+.logo:hover {
+    transform: rotate(360deg); /* Rotates the logo on hover */
+}
+
+.logo-text {
+    position: absolute;
+    left: 100%; /* Moves text to the right of image */
+    white-space: nowrap; /* Prevents text from wrapping */
+    background: rgb(190, 147, 90);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    font-family: "Merienda", cursive;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateX(-10px); /* Slight offset for smooth effect */
+}
+
+.logo-container:hover .logo-text {
+    opacity: 1; /* Shows text on hover */
+    transform: translateX(10px); /* Moves text slightly to the right */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin-left: 250px;  
+    gap: 3rem;
+}
+
+.container h1{
+    color: #F5E6D3;
+    display: inline;
+    right: -20%;
+    font-size: 1.9rem;
+    font-family: "Merienda", cursive;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    transform: scale(1.2);
+    color:  white;
+}
+
+.nav-links a.active {
+    background-color: #d2691e; /* Highlight color */
+    color: white; 
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a.active:hover {
+    background-color: #8b4513; /* Darker color on hover */
+}
+
+
+/* ScrollBar */
+
+::-webkit-scrollbar{
+    width: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: (rgb(118, 42, 42));
+}
+
+::-webkit-scrollbar-thumb{
+   min-height: 27vh;
+   background:  linear-gradient(rgb(237, 134, 74), rgb(108, 75, 42));
+   border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+      background: linear-gradient(rgb(128, 58, 17), rgb(239, 181, 123));
+      cursor: pointer;
+}
+
+header {
+    background-color: rgb(190, 147, 90);
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+nav ul {
+    list-style: none;
+    padding: 25px;
+    background: rgb(158, 106, 37);
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline;
+    padding: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav li a:hover {
+    color: rgb(31, 50, 78);
+}
+ 
+.menu {
+    margin: 20px;
+    padding: 20px;
+}
+h2 {
+    color: #b22222;
+}
+.menu-item {
+    background: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.menu-item:hover {
+    transform: scale(1.05);
+    background: #f6cb9d;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}

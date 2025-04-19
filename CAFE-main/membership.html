@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- RESPONSIVE SITE AJAX LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- FONT STYLE LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="my_cafe/jpeg" href="my_cafe.jpeg"> 
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="membership.css">
+    <script src="membership.js"></script>
+    <title>MY CAFFEE</title>
+</head>
+<body>
+    <div id="content">
+        <header class="header">
+            <nav class="nav-container">
+                <a href="#" class="logo-container">
+                    <img src="logo2.avif" class="logo" alt="Secret Dairies Café">
+                    <span class="logo-text">Secret Dairies Café</span></a>
+                <div class="nav-links">
+                    <a href="Cafe.html">Home</a>
+                    <a href="Menu.html">Menu</a>
+                    <a href="Order.html">Order</a>
+                    <a href="About.html">About</a>
+                    <a href="Location.html">Locations</a>
+                    <a href="membership.html" class="active">Membership</a><br><br>
+                </div>
+            </nav>
+        </header>
+    </div><br><br>
+
+    <div class="main">
+    <div class="contract-container">
+        <div class="header-2">
+            <h1>☕ Secret Dairies Café</h1>
+            <p>Where Stories Blend with Aroma</p>
+        </div>
+
+        <div class="contract-section">
+            <h2>Membership Agreement</h2>
+            <div class="clause">
+                <p>By signing this contract, you agree to:</p>
+                <ul>
+                    <li>Maintain the confidentiality of all cafe interactions</li>
+                    <li>Respect the quiet atmosphere of our literary space</li>
+                    <li>Handle diary materials with care</li>
+                    <li>Enjoy at least one beverage per visit</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contract-section">
+            <h2>Personal Pledge</h2>
+            <div class="confidential">
+                🤫 All information shared here remains between you and the café walls
+            </div>
+            <label>Full Name:</label>
+            <input type="text" id="name" placeholder="Enter your full name">
+
+            <label>Email:</label>
+            <input type="email" id="email" placeholder="your.secret@email.com">
+        </div>
+
+        <div class="contract-section">
+            <h2>Signature & Commitment</h2>
+            <div class="signature-section">
+                <div>
+                    <label>Digital Signature:</label>
+                    <textarea  id="signature" placeholder="Type your personal pledge..."></textarea>
+                </div>
+                <div>
+                    <label>Commitment Date:</label>
+                    <input type="date">
+                    <div class="confidential" id="date" style="margin-top: 1rem;">
+                        📜 This contract renews with every visit
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contract-section">
+            <label style="display: block; text-align: center;">
+                <input type="checkbox"  id="agreement"> I agree to preserve the café's mystical atmosphere
+            </label>
+        </div>
+
+        <div class="buttons-container">
+            <button type="button" class="back-btn" onclick="goBack()">← Back to Café</button>
+            <button class="submit-btn">Seal with a Coffee Stain ☕</button>
+        </div>
+    </div>
+</div>
+
+    <footer class="footer">
+        <p>© 2025 Secret Dairies Café | All Rights Reserved</p><br>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy</a>
+                <a href="privacy.html">Terms</a><br><br>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1HQTruysE1/?mibextid=wwXIfr" data-tooltip="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/secret_dairies_cafe?igsh=MWdoc2QzemJkOGMxNQ==" data-tooltip="Instagram"><i class="fa fa-instagram"></i></a>
+                <a href="https://x.com/Secret_Dairies?t=Yu1z0H1ipcq5OFqNGRmwjA&s=09" data-tooltip="Twitter"><i class="fa fa-twitter"></i></a>
+                </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Coffee Order</title>
+
+  <!-- Font & Icon Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Order.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav-container">
+      <a href="#" class="logo-container">
+        <img src="logo2.avif" class="logo" alt="Secret Dairies Café">
+        <span class="logo-text">Secret Dairies Café</span>
+      </a>
+      <div class="nav-links">
+        <a href="Cafe.html">Home</a>
+        <a href="Menu.html">Menu</a>
+        <a href="Order.html" class="active">Order</a>
+        <a href="About.html">About</a>
+        <a href="Location.html">Locations</a>
+        <a href="membership.html">Membership</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ✅ Order Form -->
+  <form id="coffeeOrderForm" action="submit_order.php" method="POST">
+    <div class="order-form">
+      <h2>☕ Coffee Order Form ☕</h2>
+
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="drink">Drink Type:</label>
+        <select name="drink" id="drink" required>
+          <option>Espresso</option>
+          <option>Latte</option>
+          <option>Mocha</option>
+          <option>Americano</option>
+          <option>Cappuccino</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Milk Preference:</label><br>
+        <input type="checkbox" name="milk[]" value="Whole Milk"> Whole Milk
+        <input type="checkbox" name="milk[]" value="Oat Milk"> Oat Milk
+        <input type="checkbox" name="milk[]" value="Almond Milk"> Almond Milk
+      </div>
+
+      <div class="form-group">
+        <label>Sweeteners:</label><br>
+        <input type="checkbox" name="sweetness[]" value="Sugar"> Sugar
+        <input type="checkbox" name="sweetness[]" value="Honey"> Honey
+        <input type="checkbox" name="sweetness[]" value="Sugar-Free Syrup"> Sugar-Free Syrup
+      </div>
+
+      <div class="form-group">
+        <label for="flavor">Flavor Option:</label>
+        <select name="flavor" id="flavor">
+          <option>Vanilla</option>
+          <option>Caramel</option>
+          <option>Hazelnut</option>
+          <option>Mocha</option>
+          <option>None</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="size">Size:</label>
+        <select name="size" id="size">
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Special Instructions:</label>
+        <input type="text" name="instructions" placeholder="Extra hot, no foam, etc.">
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Order</button>
+    </div>
+  </form>
+
+  <footer class="footer">
+    <p>© 2025 Secret Dairies Café | All Rights Reserved</p><br>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="privacy.html">Terms</a><br><br>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1HQTruysE1/?mibextid=wwXIfr" data-tooltip="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/secret_dairies_cafe?igsh=MWdoc2QzemJkOGMxNQ==" data-tooltip="Instagram"><i class="fa fa-instagram"></i></a>
+                <a href="https://x.com/Secret_Dairies?t=Yu1z0H1ipcq5OFqNGRmwjA&s=09" data-tooltip="Twitter"><i class="fa fa-twitter"></i></a>
+            </div>
+</footer>
+</body>
+</html>

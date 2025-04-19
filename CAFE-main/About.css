@@ -1,0 +1,333 @@
+/* RESET DEFAULT STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #F5E6D3;
+    color: #6F4E37;
+}  
+
+/* NAVBAR */
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    position: relative;
+    left: -290px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and text */
+}
+
+.logo {
+    width: 80px;  
+    height: 70px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 2px solid #F5E6D3; 
+    transition: transform 0.5s ease-in-out; /* Smooth rolling effect */
+}
+
+.logo:hover {
+    transform: rotate(360deg); /* Rotates the logo on hover */
+}
+
+.logo-text {
+    position: absolute;
+    left: 100%; /* Moves text to the right of image */
+    white-space: nowrap; /* Prevents text from wrapping */
+    background: #6F4E37;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    font-family: "Merienda", cursive;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateX(-10px); /* Slight offset for smooth effect */
+}
+
+.logo-container:hover .logo-text {
+    opacity: 1; /* Shows text on hover */
+    transform: translateX(10px); /* Moves text slightly to the right */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin-left: 50px;  
+    gap: 3rem;
+}
+
+.nav-links a {
+    color: #F5E6D3;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    transform: scale(1.2);
+    color:  burlywood;
+}
+
+.nav-links a.active {
+    background-color: #d2691e; /* Highlight color */
+    color: white; 
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a.active:hover {
+    background-color: #8b4513; /* Darker color on hover */
+}
+
+/* HEADER SECTION */
+.header {
+    background: #6F4E37;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header h1 {
+    color: white;
+    font-family: 'Merienda', cursive;
+    font-size: 2.5rem;
+}
+
+/* ScrollBar */
+
+::-webkit-scrollbar{
+    width: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: (rgb(118, 42, 42));
+}
+
+::-webkit-scrollbar-thumb{
+   min-height: 27vh;
+   background:  linear-gradient(rgb(237, 134, 74), rgb(108, 75, 42));
+   border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+      background: linear-gradient(rgb(128, 58, 17), rgb(239, 181, 123));
+      cursor: pointer;
+}
+
+/* ABOUT SECTION */
+.about {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about h2 {
+    font-size: 2.2rem;
+    font-family: 'Merienda', cursive;
+    margin-bottom: 10px;
+    color: #8b4513;
+    position: relative;
+}
+
+.about h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #d2691e;
+    display: block;
+    margin: 5px auto;
+    border-radius: 2px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* IMAGE SECTION */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* BUTTON */
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    background: #d2691e;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #8b4513;
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #6F4E37;
+    color: white;
+}
+
+.footer p {
+    font-size: 20px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #baba8d;
+}   
+
+/* SOCIAL ICONS */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.social-links {
+    margin-top: 19px;
+}
+
+/* SOCIAL MEDIA ICONS */
+.social-links a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    color: white;
+    margin: 0 10px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #3e2723;
+    border: 2px solid #f7f3f1;
+    transition: all 0.4s ease-in-out;
+}
+
+/* TOOLTIP STYLING */
+.social-links a::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(241, 202, 142, 0.8);
+    color: black;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* TOOLTIP ARROW */
+.social-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(241, 202, 142, 0.8) transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* SHOW TOOLTIP ON HOVER */
+.social-links a:hover::before,
+.social-links a:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* SOCIAL MEDIA HOVER EFFECTS */
+.social-links a:nth-child(1):hover {
+    background-color: #1877F2;
+    color: white;
+    border-color: #1877F2;
+    transform: rotate(360deg) scale(1.1);
+}
+
+.social-links a:nth-child(2):hover {
+    background-color: #E1306C;
+    color: white;
+    border-color: #E1306C;
+    transform: rotate(-360deg) scale(1.1);
+}
+
+.social-links a:nth-child(3):hover {
+    background-color: #1DA1F2;
+    color: white;
+    border-color: #1DA1F2;
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
